@@ -1,0 +1,109 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/Order",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "56403"
+        }
+      ],
+      "UpstreamPathTemplate": "/Order",
+      "UpstreamHttpMethod": [ "Get" ],
+      "SwaggerKey": "Orders",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/Product",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "57963"
+        }
+      ],
+      "UpstreamPathTemplate": "/Product",
+      "UpstreamHttpMethod": [ "Get" ],
+      "SwaggerKey": "Products"
+    },
+    {
+      "DownstreamPathTemplate": "/Account",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44469"
+        }
+      ],
+      "UpstreamPathTemplate": "/Account",
+      "UpstreamHttpMethod": [ "Get" ],
+      "SwaggerKey": "Accounts"
+    },
+    {
+      "DownstreamPathTemplate": "/PlaceOrder",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "58448"
+        }
+      ],
+      "UpstreamPathTemplate": "/PlaceOrder",
+      "SwaggerKey": "PlaceOrders",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowScopes": []
+      }
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "Orders",
+      "Config": [
+        {
+          "Name": "Orders API",
+          "Version": "v1",
+          "Url": "http://localhost:56403/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "Products",
+      "Config": [
+        {
+          "Name": "Products API",
+          "Version": "v1",
+          "Url": "http://localhost:57963/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "Accounts",
+      "Config": [
+        {
+          "Name": "Accounts API",
+          "Version": "v1",
+          "Url": "http://localhost:44469/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "PlaceOrders",
+      "Config": [
+        {
+          "Name": "PlaceOrders API",
+          "Version": "v1",
+          "Url": "http://localhost:58448/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:45697"
+  }
+}
